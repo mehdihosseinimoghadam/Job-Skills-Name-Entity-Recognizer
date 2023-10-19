@@ -25,3 +25,17 @@ Training script for transformer huggingface model can be found in:
  To test NER with both models look at this file:
  `HuggingFace_&_Flair_Test.ipynb`
  
+
+### Preprocessing steps:
+1) For data Processing I will first make a list of all possible skills avalible (this can be done with prompt engineering with chatgpt or crawling job sites)
+
+2) Then I need some job description text to label them with avalible list of skills (these job descriptions will be gathered from 5 datasets mentioned above)
+
+3) Target is to turn this text `We need someone with statistical background and fluent in python` to 
+`O,O,O,O,In-Sk,O,O,O,O,In-Sk`
+
+4) First I break all extracted texts from above datasets to smaller sentences (split with '.' )
+then I remove punctuation, \r, \n and some other words. I won't use stemming or lemetization
+because I don't want to manipulate the nature of text too much.
+Next, I will use regex to search in each sentence if there is any word from skills list in that sentence, if yes, label it as 'In-SK' otherwise label it as 'O'.(note some skills like project management will be counted twice, because it has two words it it.)
+Finally turn all sentence/label pairs into dataframe, it is roughly about 125K pairs.
