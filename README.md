@@ -9,8 +9,7 @@ Dataset is the combination of 5 different data sources from kaggle:
 - [Dataset 4](https://www.kaggle.com/code/rashikrahmanpritom/explanatory-data-analysis-on-glassdoor-jobs)
 - [Dataset 5](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction)
 
-Note: none of these datasets have any kind of NER tagging, I will use a python script to extract all such data out of these.
-All data processing is in `NER_Data_Gathering_and_Processing.ipynb` file
+Note: none of these datasets have any kind of NER tagging, I will use a python script to extract all such data out of these. All data processing is in `NER_Data_Gathering_and_Processing.ipynb` file
 
 ### NER model training scripts:
  There are two models for NER in this repo. 
