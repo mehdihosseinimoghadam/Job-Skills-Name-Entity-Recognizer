@@ -59,4 +59,10 @@ Finally turn all sentence/label pairs into dataframe, it is roughly about 125K p
 
 
 ### Transformer VS Flair: For now between these to that I have trained Flair is Better :)
-here arer some screenshots of results:
+here are some screenshots of results:
+
+- *Frontend Job Desc. with Transformer HF*:
+-  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="400" width="100" >
+
+
+
