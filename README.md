@@ -39,3 +39,14 @@ then I remove punctuation, \r, \n and some other words. I won't use stemming or 
 because I don't want to manipulate the nature of text too much.
 Next, I will use regex to search in each sentence if there is any word from skills list in that sentence, if yes, label it as 'In-SK' otherwise label it as 'O'.(note some skills like project management will be counted twice, because it has two words it it.)
 Finally turn all sentence/label pairs into dataframe, it is roughly about 125K pairs.
+
+
+
+### Summary of model and training methods used:
+
+| Model | Embedding | lr | BatchSize | #Epoch | Precision | Recall | f1 | train size|
+| ------ | ------ |------ | ------ |------ | ------ |------ | ------ |------ | 
+| Flair | distilbert | .04 | 16 | 4 | .98 | .98 | .98 | 40K pairs | 
+| Transformer | distilbert | 4e-06 | 16 | 3 | .69 | .81 | .75 | 100K pairs | 
+
+
