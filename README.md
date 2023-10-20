@@ -70,5 +70,6 @@ here are some screenshots of results:
 ### So it is clear that from only this example(there much more) that transformers have a hard time to detect some of the skills (specially those that are kind of short form of a longer name like SQL or Git), this can be because of several reasons: 
 - Training duration (starting warm up)
 - Flair uses bert as embedding so it is definately very strong, but it also uses conditional random fields (CRF) as an additional step as well
--  other reason could be data, I used 100K pairs to train transformer but only 40K to train flair (however I think using more data will make it even stronger). 
+-  other reason could be data, I used 100K pairs to train transformer but only 40K to train flair (however I think using more data will make it even stronger).
+-  Also Transformer has two more tokens <start> and <end> which can make difference
 
