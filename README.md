@@ -26,6 +26,8 @@ Training script for transformer huggingface model can be found in:
  To test NER with both models look at this file:
  `HuggingFace_&_Flair_Test.ipynb`
 
+------------------------------------------------
+
 ### Model Access:
 
 Models can be downloaded in `HuggingFace_&_Flair_Test.ipynb` via Gdown or from these links:
@@ -60,6 +62,7 @@ def prediction(text):
 
 ```
  
+------------------------------------------------
 
 ### Preprocessing steps:
 1) For data Processing I will first make a list of all possible skills avalible (this can be done with prompt engineering with chatgpt or crawling job sites)
@@ -75,7 +78,7 @@ because I don't want to manipulate the nature of text too much.
 Next, I will use regex to search in each sentence if there is any word from skills list in that sentence, if yes, label it as 'In-SK' otherwise label it as 'O'.(note some skills like project management will be counted twice, because it has two words it it.)
 Finally turn all sentence/label pairs into dataframe, it is roughly about 125K pairs.
 
-
+------------------------------------------------
 
 ### Summary of model and training methods used:
 
@@ -92,6 +95,9 @@ Main reason to use `distilbert` as embedding was to be faster in both training a
 Also Flair uses additional CRF step in training
 
 
+------------------------------------------------
+
+
 ###  Analysis of model results along with chosen metrics for evaluation:
  
  - **Flair** : General accuracy for flair model on test set  is 98.36%, (precision, recall, and f-1) for `In-SK` are as follow (98.2%, 98.4%, and 98.3%)
@@ -99,6 +105,8 @@ Also Flair uses additional CRF step in training
  
  - **Transformer HF🤗** : General accuracy for Transformer🤗 model on valid set  is 97.5%, (precision, recall, and f-1) for `In-SK` are as follow (69%, 81%, and 75%)
 
+
+------------------------------------------------
 
 ### Transformer VS Flair: For now between these to that I have trained Flair is Better :)
 here are some screenshots of results:
@@ -109,13 +117,16 @@ here are some screenshots of results:
 - *Same Frontend Job Desc. with Flair*:
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/flair%20frontend1.JPG" height="900" width="800" >
 
+
+------------------------------------------------
+
 ### So it is clear that from only this example(there much more) that transformers have a hard time to detect some of the skills (specially those that are kind of short form of a longer name like SQL or Git), this can be because of several reasons: 
 - Training duration (starting warm up)
 - Flair uses bert as embedding so it is definately very strong, but it also uses conditional random fields (CRF) as an additional step as well
 -  other reason could be data, I used 100K pairs to train transformer but only 40K to train flair (however I think using more data will make it even stronger).
 -  Also Transformer has two more tokens `start` and `end` which can make difference
 
-
+------------------------------------------------
 
 ### Here are some more examples of NER with different real job posts from indeed
 
@@ -148,12 +159,14 @@ here are some screenshots of results:
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/warehouse.JPG" height="900" width="800" >
 
 
-
+------------------------------------------------
 
 
 ### Instructions for reproducing results:
 To reproduce the results, just open each of notebooks in google colab or local jupyter lab and start running cells one by one, top to bottom, all weights are in drive and will be downloaded with Gdown
 (just in case of any problem let me know so I can fix any possible problem)
+
+------------------------------------------------
 
 ### Future work:
 As explained [here](https://medium.com/product-ai/automatic-speech-recognition-for-specific-domains-28f400fb9000), for future work we need to have two kinds of model
@@ -163,6 +176,8 @@ As explained [here](https://medium.com/product-ai/automatic-speech-recognition-f
 Because there are lots of different job fields out there and some words might have different meanings in different contexts, we can have one general model to detect general skills like *communication, writing, presenting, ...*
 and one model for each of the fields that we know for example Data, Legal, ...
 You might ask how we can underestant which one to use when a new user comes and sends a CV or JD, it is simple: we can add a field in a form (like: *Please enter your field of interest*) and once done that field will invoke the related model from pool of models thathat we have or this also can be done with text classification module.
+
+------------------------------------------------
 
 ### How to serve in AWS:
 
