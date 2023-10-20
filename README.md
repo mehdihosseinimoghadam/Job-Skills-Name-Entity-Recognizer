@@ -43,7 +43,20 @@ model = BertForTokenClassification.from_pretrained(model_name)
 
 ```
 
+and make prediction with
 
+
+```py
+
+def prediction(text):
+  encoding = tokenizer(text, return_tensors="pt")
+  outputs = model(**encoding)
+  logits = outputs.logits
+  predicted_label_classes = logits.argmax(-1)
+  predicted_labels = [model.config.id2label[id] for id in predicted_label_classes.squeeze().tolist()]
+  return ','.join(predicted_labels)
+
+```
  
 
 ### Preprocessing steps:
