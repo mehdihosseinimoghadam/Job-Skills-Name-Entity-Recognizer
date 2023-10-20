@@ -65,7 +65,7 @@ here are some screenshots of results:
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="900" width="600" >
 
 - *Same Frontend Job Desc. with Flair*:
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/flair%20frontend1.JPG" height="900" width="600" >
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/flair%20frontend1.JPG" height="900" width="800" >
 
 
 
