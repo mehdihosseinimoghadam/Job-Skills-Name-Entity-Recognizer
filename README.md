@@ -9,7 +9,10 @@ Dataset is the combination of 5 different data sources from kaggle:
 - [Dataset 4](https://www.kaggle.com/code/rashikrahmanpritom/explanatory-data-analysis-on-glassdoor-jobs)
 - [Dataset 5](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction)
 
-Note: none of these datasets have any kind of NER tagging, I will use a python script to extract all such data out of these. All data processing is in `NER_Data_Gathering_and_Processing.ipynb` file
+Note: none of these datasets have any kind of NER tagging. I will use a python script to extract all such data out of these. All data processing is in `NER_Data_Gathering_and_Processing.ipynb` file
+
+
+
 
 ------------------------------------------------
 
@@ -64,19 +67,18 @@ def prediction(text):
  
 ------------------------------------------------
 
+
+
 ### Preprocessing steps:
-1) For data Processing I will first make a list of all possible skills avalible (this can be done with prompt engineering with chatgpt or crawling job sites)
+1) For data processing I will first make a list of all possible skills available (this can be done with prompt engineering with chatgpt or crawling job sites)
 
 2) Then I need some job description text to label them with avalible list of skills (these job descriptions will be gathered from 5 datasets mentioned above)
 
 3) Target is to turn this text `We need someone with statistical background and fluent in python` to 
 `O,O,O,O,In-Sk,O,O,O,O,In-Sk`
 
-4) First I break all extracted texts from above datasets to smaller sentences (split with '.' )
-then I remove punctuation, \r, \n and some other words. I won't use stemming or lemetization
-because I don't want to manipulate the nature of text too much.
-Next, I will use regex to search in each sentence if there is any word from skills list in that sentence, if yes, label it as 'In-SK' otherwise label it as 'O'.(note some skills like project management will be counted twice, because it has two words it it.)
-Finally turn all sentence/label pairs into dataframe, it is roughly about 125K pairs.
+4) First I will break all extracted texts from the above datasets to smaller sentences (split with '.' ). Then I will remove punctuation, \r, \n and some other words. I won't use stemming or lemetization because I don't want to manipulate the nature of text too much. Next, I will use regex to search in each sentence if there is any word from the skills list in that sentence. If yes, label it as 'In-SK' otherwise label it as 'O'. Note some skills like project management will be counted twice, because it has two words. Finally turn all sentences / label pairs into dataframe. It is roughly about 125K pairs.
+
 
 ------------------------------------------------
 
@@ -100,10 +102,10 @@ Also Flair uses additional CRF step in training
 
 ###  Analysis of model results along with chosen metrics for evaluation:
  
- - **Flair** : General accuracy for flair model on test set  is 98.36%, (precision, recall, and f-1) for `In-SK` are as follow (98.2%, 98.4%, and 98.3%)
+ - **Flair** : General accuracy for flair model on test set  is 98.36%, (precision, recall, and f-1) for `In-SK` are as follows (98.2%, 98.4%, and 98.3%)
  - Accuracy alone is not a good metric here because NER dataset is generally a kind of imbalanced data so having precision and recall as well as f-1 would give a better understanding of the model accuracy.
  
- - **Transformer HF🤗** : General accuracy for Transformer🤗 model on valid set  is 97.5%, (precision, recall, and f-1) for `In-SK` are as follow (69%, 81%, and 75%)
+ - **Transformer HF🤗** : General accuracy for Transformer🤗 model on valid set  is 97.5%, (precision, recall, and f-1) for `In-SK` are as follows (69%, 81%, and 75%)
 
 
 ------------------------------------------------
@@ -163,8 +165,8 @@ here are some screenshots of results:
 
 
 ### Instructions for reproducing results:
-To reproduce the results, just open each of notebooks in google colab or local jupyter lab and start running cells one by one, top to bottom, all weights are in drive and will be downloaded with Gdown
-(just in case of any problem let me know so I can fix any possible problem)
+
+To reproduce the results, just open each of the notebooks in google colabor local jupyter lab and start running cells one by one, top to bottom. All weights are in drive and will be downloaded with Gdown (if there are any problems let me know so I can fix them).
 
 ------------------------------------------------
 
@@ -181,10 +183,10 @@ You might ask how we can underestant which one to use when a new user comes and 
 
 ### How to serve in AWS:
 
-To serve the model wecan use AWS Lambda function to make a simple serverless function from NER model and connecting that to AWS api gateway to make sure that we can handle huge requests and finally we can use dynamodb to log all data.
+To serve the model we can use AWS Lambda function to make a simple serverless function from NER model and connecting that to AWS api gateway to make sure that we can handle huge requests and finally we can use dynamodb to log all data.
 To better define and handle exceptions it is recomended to define a AWS step function machine.
 
-Also for multi model case (case that we have several models we can use one lambda to detect the type of JD or CV (this also can be done with text classification) and then that middle lambda will envode the other lambda which the model lives)
+Also for multi model case (case that we have several models we can use one lambda to detect the type of JD or CV (this also can be done with text classification) and then that middle lambda will envoke the other lambda which the model lives)
 
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/aws1.JPG" height="900" width="1000" >
 
