@@ -73,3 +73,34 @@ here are some screenshots of results:
 -  other reason could be data, I used 100K pairs to train transformer but only 40K to train flair (however I think using more data will make it even stronger).
 -  Also Transformer has two more tokens <start> and <end> which can make difference
 
+
+
+- Data Science
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/data%20science.JPG" height="900" width="800" >
+
+- Digital Marketing
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/digital%20marketing.JPG" height="900" width="800" >
+
+- Digital Marketing1
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/digital%20marketing1.JPG" height="900" width="800" >
+
+- FrontEnd
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="900" width="800" >
+
+- Legal
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/legal.JPG" height="900" width="800" >
+
+- Warehouse
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/warehouse.JPG" height="900" width="800" >
+
+
+
+
+
+
+
+
+
+
+
+
