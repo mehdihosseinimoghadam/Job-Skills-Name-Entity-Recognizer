@@ -86,6 +86,10 @@ Two main method used to train the skill NER model:
 | Transformer | distilbert | 4e-06 | 16 | 3 | .69 | .81 | .75 | 100K pairs | T4/3h (colab) |
 
 
+Main reason to use `distilbert` as embedding was to be faster in both training and inference as well as it needs less ram compared to other models like `BERT`, `Roberta`, `T5`
+Also Flair uses additional CRF step in training
+
+
 ###  Analysis of model results along with chosen metrics for evaluation:
  
  - **Flair** : General accuracy for flair model on test set  is 98.36%, (precision, recall, and f-1) for `In-SK` are as follow (98.2%, 98.4%, and 98.3%)
