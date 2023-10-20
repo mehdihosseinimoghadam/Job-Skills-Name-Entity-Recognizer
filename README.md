@@ -62,7 +62,7 @@ Finally turn all sentence/label pairs into dataframe, it is roughly about 125K p
 here are some screenshots of results:
 
 - *Frontend Job Desc. with Transformer HF*:
--  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="400" width="100" >
+-  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="900" width=600" >
 
 
 
