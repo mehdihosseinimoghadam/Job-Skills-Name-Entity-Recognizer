@@ -107,8 +107,26 @@ here are some screenshots of results:
 
 
 
+### Instructions for reproducing results:
+To reproduce the results, just open each of notebooks in google colab or local jupyter lab and start running cells one by one, top to bottom, all weights are in drive and will be downloaded with Gdown
+(just in case of any problem let me know so I can fix any possible problem)
 
+### Future work:
+As explained [here](https://medium.com/product-ai/automatic-speech-recognition-for-specific-domains-28f400fb9000), for future work we need to have two kinds of model
+- General Domain
+- Specific Domain
 
+Because there are lots of different job fields out there and some words might have different meanings in different contexts, we can have one general model to detect general skills like *communication, writing, presenting, ...*
+and one model for each of the fields that we know for example Data, Legal, ...
+You might ask how we can underestant which one to use when a new user comes and sends a CV or JD, it is simple: we can add a field in a form (like: *Please enter your field of interest*) and once done that field will invode the related model from pool of models thathat we have.
 
+### How to serve in AWS:
+
+To serve the model wecan use AWS Lambda function to make a simple serverless function from NER model and connecting that to AWS api gateway to make sure that we can handle huge requests and finally we can use dynamodb to log all data.
+To better define and handle exceptions it is recomended to define a AWS step function machine.
+
+Also for multi model case (case that we have several models we can use one lambda to detect the type of JD or CV (this also can be done with text classification) and then that middle lambda will envode the other lambda which the model lives)
+
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/aws1.JPG" height="900" width="800" >
 
 
