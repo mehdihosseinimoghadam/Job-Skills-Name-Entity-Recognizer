@@ -64,5 +64,8 @@ here are some screenshots of results:
 - *Frontend Job Desc. with Transformer HF*:
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="900" width="600" >
 
-- *Frontend Job Desc. with Flair*:
+- *Same Frontend Job Desc. with Flair*:
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/flair%20frontend1.JPG" height="900" width="600" >
+
+
 
