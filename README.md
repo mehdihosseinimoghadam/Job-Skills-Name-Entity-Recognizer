@@ -44,9 +44,9 @@ Finally turn all sentence/label pairs into dataframe, it is roughly about 125K p
 
 ### Summary of model and training methods used:
 
-| Model | Embedding | lr | BatchSize | #Epoch | Precision | Recall | f1 | train size|
-| ------ | ------ |------ | ------ |------ | ------ |------ | ------ |------ | 
-| Flair | distilbert | .04 | 16 | 4 | .98 | .98 | .98 | 40K pairs | 
-| Transformer | distilbert | 4e-06 | 16 | 3 | .69 | .81 | .75 | 100K pairs | 
+| Model | Embedding | lr | BatchSize | #Epoch | Precision | Recall | f1 | train size| GPU/hour |
+| ------ | ------ |------ | ------ |------ | ------ |------ | ------ |------ | ------ |
+ | Flair | distilbert | .04 | 16 | 4 | .98 | .98 | .98 | 40K pairs | T4/4h (colab)|
+| Transformer | distilbert | 4e-06 | 16 | 3 | .69 | .81 | .75 | 100K pairs | T4/3h (colab) |
 
 
