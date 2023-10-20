@@ -119,7 +119,7 @@ As explained [here](https://medium.com/product-ai/automatic-speech-recognition-f
 
 Because there are lots of different job fields out there and some words might have different meanings in different contexts, we can have one general model to detect general skills like *communication, writing, presenting, ...*
 and one model for each of the fields that we know for example Data, Legal, ...
-You might ask how we can underestant which one to use when a new user comes and sends a CV or JD, it is simple: we can add a field in a form (like: *Please enter your field of interest*) and once done that field will invode the related model from pool of models thathat we have.
+You might ask how we can underestant which one to use when a new user comes and sends a CV or JD, it is simple: we can add a field in a form (like: *Please enter your field of interest*) and once done that field will invoke the related model from pool of models thathat we have or this also can be done with text classification module.
 
 ### How to serve in AWS:
 
