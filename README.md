@@ -23,6 +23,9 @@ Training script for transformer huggingface model can be found in:
  
  To test NER with both models look at this file:
  `HuggingFace_&_Flair_Test.ipynb`
+
+
+
  
 
 ### Preprocessing steps:
@@ -129,5 +132,13 @@ To better define and handle exceptions it is recomended to define a AWS step fun
 Also for multi model case (case that we have several models we can use one lambda to detect the type of JD or CV (this also can be done with text classification) and then that middle lambda will envode the other lambda which the model lives)
 
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/aws1.JPG" height="900" width="1000" >
+
+
+
+
+Prediction results in a CSV files:
+
+`flair_results_sample.csv` and `transformer_bert_results_sample.csv` contains sample predictions from each model
+
 
 
