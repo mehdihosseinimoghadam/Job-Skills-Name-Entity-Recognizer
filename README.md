@@ -78,20 +78,6 @@ here are some screenshots of results:
 - Data Science
  <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/data%20science.JPG" height="900" width="800" >
 
-- Digital Marketing
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/digital%20marketing.JPG" height="900" width="800" >
-
-- Digital Marketing1
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/digital%20marketing1.JPG" height="900" width="800" >
-
-- FrontEnd
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/frontend.JPG" height="900" width="800" >
-
-- Legal
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/legal.JPG" height="900" width="800" >
-
-- Warehouse
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/warehouse.JPG" height="900" width="800" >
 
 
 
