@@ -127,6 +127,6 @@ To better define and handle exceptions it is recomended to define a AWS step fun
 
 Also for multi model case (case that we have several models we can use one lambda to detect the type of JD or CV (this also can be done with text classification) and then that middle lambda will envode the other lambda which the model lives)
 
- <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/aws1.JPG" height="900" width="800" >
+ <img src="https://github.com/mehdihosseinimoghadam/RoleMapper/blob/main/assets/aws1.JPG" height="900" width="1000" >
 
 
