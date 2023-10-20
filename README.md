@@ -48,7 +48,6 @@ Finally turn all sentence/label pairs into dataframe, it is roughly about 125K p
 
 Two main method used to train the skill NER model:
 
--
 
 | Model | Embedding | lr | BatchSize | #Epoch | Precision | Recall | f1 | train size| GPU/hour |
 | ------ | ------ |------ | ------ |------ | ------ |------ | ------ |------ | ------ |
