@@ -24,6 +24,24 @@ Training script for transformer huggingface model can be found in:
  To test NER with both models look at this file:
  `HuggingFace_&_Flair_Test.ipynb`
 
+### Model Access:
+
+Models can be downloaded in `HuggingFace_&_Flair_Test.ipynb` via Gdown or from these links:
+
+Model for Flair [link](https://drive.google.com/uc?id=1Pqh_QrByhiPsmBrRz6ZlciHIRLISN8Fe)
+
+Model for Transformer HF can be downloaded via the following script:
+
+```py
+
+from transformers import AutoTokenizer, BertForTokenClassification
+
+model_name = "MehdiHosseiniMoghadam/skill-role-mapper"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = BertForTokenClassification.from_pretrained(model_name)
+
+
+```
 
 
  
