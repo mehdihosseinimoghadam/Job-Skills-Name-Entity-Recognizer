@@ -50,3 +50,13 @@ Finally turn all sentence/label pairs into dataframe, it is roughly about 125K p
 | Transformer | distilbert | 4e-06 | 16 | 3 | .69 | .81 | .75 | 100K pairs | T4/3h (colab) |
 
 
+###  Analysis of model results along with chosen metrics for evaluation:
+ 
+ - **Flair** : General accuracy for flair model on test set  is 98.36%, (precision, recall, and f-1) for `In-SK` are as follow (98.2%, 98.4%, and 98.3%)
+ - Accuracy alone is not a good metric here because NER dataset is generally a kind of imbalanced data so having precision and recall as well as f-1 would give a better understanding of the model accuracy.
+ 
+ - **Transformer HF🤗** : General accuracy for Transformer🤗 model on valid set  is 97.5%, (precision, recall, and f-1) for `In-SK` are as follow (69%, 81%, and 75%)
+
+
+### Transformer VS Flair: For now between these to that I have trained Flair is Better :)
+here arer some screenshots of results:
