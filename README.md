@@ -1,5 +1,6 @@
 
-# RoleMapper Custom NER
+# Named Entity Recognition for Job Skills
+
 
 ### Dataset used:
 Dataset is the combination of 5 different data sources from kaggle:
